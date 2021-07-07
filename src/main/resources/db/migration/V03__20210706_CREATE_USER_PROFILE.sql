@@ -1,0 +1,8 @@
+CREATE TABLE user_profiles (
+    USER_ID BIGINT(20) NOT NULL,
+    profiles_id BIGINT(20) NOT NULL,
+    FOREIGN KEY (USER_ID) REFERENCES USER(id),
+    FOREIGN KEY (profiles_id) REFERENCES PROFILE(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO user_profiles(USER_ID, profiles_id) VALUES(1, 1);
